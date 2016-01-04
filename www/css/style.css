@@ -1,0 +1,16 @@
+/* Empty. Add your own CSS if you like */
+.icon-customer {
+  background-repeat: no-repeat;
+  background-position:center;
+  background-image: url('../img/customer.png');
+  height: 70%;
+  background-size: contain;
+}
+
+.icon-quotation {
+  background-repeat: no-repeat;
+  background-position:center;
+  background-image: url('../img/quotation.jpg');
+  height: 70%;
+  background-size: contain;
+}
