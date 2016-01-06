@@ -33,11 +33,13 @@
 
   <ion-side-menu side="right">
     <ion-header-bar class="bar bar-header bar-dark">
-      <h1 class="title">Right Menu</h1>
+      <a menu-close class="button icon ion-ios7-person"> {{currentLoginUser.userName}}</a>
     </ion-header-bar>
     <ion-content>
     <ion-list>
-      <ion-item menu-close ng-click="logout()">Logout</ion-item>
+      <ion-item menu-close ng-click="showUserInfo()">My Profile</ion-item>
+      <ion-item menu-close ng-click="changePwd()">Change Password</ion-item>
+      <ion-item menu-close ng-click="logout()">Log Off</ion-item>
     </ion-list>
     </ion-content>
   </ion-side-menu>

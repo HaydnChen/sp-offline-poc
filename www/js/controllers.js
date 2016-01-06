@@ -1,11 +1,12 @@
 angular.module('ionicApp.controllers', [])
-.controller('MenuCtrl', function($scope, $ionicSideMenuDelegate) {
+.controller('MenuCtrl', function($scope, $ionicSideMenuDelegate, $rootScope) {
   $scope.showMenu = function () {
     $ionicSideMenuDelegate.toggleLeft();
   };
   $scope.showRightMenu = function () {
     $ionicSideMenuDelegate.toggleRight();
   };
+  $scope.currentLoginUser = $rootScope.currentLoginUser;
 })
 .controller('HomeTabCtrl', function($scope,$ionicModal,$timeout) {
 

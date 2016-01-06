@@ -198,15 +198,63 @@ angular.module('ionicApp', [ 'ionic', 'ionicApp.controllers' ])
 				controller : 'SearchTabCtrl'
 			}
 		}
-	}).state('tabs.sync', {
+	}).state('tabs.syncMain', {
 		url : "/sync/main",
 		views : {
 			'sync-tab@tabs' : {
 				templateUrl : "templates/sync/menu.html",
 				controller : 'MenuCtrl'
 			},
-			'menuContent@tabs.sync' : {
+			'menuContent@tabs.syncMain' : {
 				templateUrl : "templates/sync/main.html",
+				controller : 'SyncTabCtrl'
+			}
+		}
+	}).state('tabs.syncProduct', {
+		url : "/sync/product",
+		views : {
+			'sync-tab@tabs' : {
+				templateUrl : "templates/sync/menu.html",
+				controller : 'MenuCtrl'
+			},
+			'menuContent@tabs.syncProduct' : {
+				templateUrl : "templates/sync/product.html",
+				controller : 'SyncTabCtrl'
+			}
+		}
+	}).state('tabs.syncProspect', {
+		url : "/sync/prospect",
+		views : {
+			'sync-tab@tabs' : {
+				templateUrl : "templates/sync/menu.html",
+				controller : 'MenuCtrl'
+			},
+			'menuContent@tabs.syncProspect' : {
+				templateUrl : "templates/sync/prospect.html",
+				controller : 'SyncTabCtrl'
+			}
+		}
+	}).state('tabs.syncQuotation', {
+		url : "/sync/quotation",
+		views : {
+			'sync-tab@tabs' : {
+				templateUrl : "templates/sync/menu.html",
+				controller : 'MenuCtrl'
+			},
+			'menuContent@tabs.syncQuotation' : {
+				templateUrl : "templates/sync/quotation.html",
+				controller : 'SyncTabCtrl'
+			}
+		}
+	}).state('tabs.syncEsubmission', {
+		url : "/sync/esubmission",
+		views : {
+			'sync-tab@tabs' : {
+				templateUrl : "templates/sync/menu.html",
+				controller : 'MenuCtrl'
+			},
+			'menuContent@tabs.syncEsubmission' : {
+				templateUrl : "templates/sync/esubmission.html",
 				controller : 'SyncTabCtrl'
 			}
 		}
@@ -248,19 +296,19 @@ angular.module('ionicApp', [ 'ionic', 'ionicApp.controllers' ])
 	$urlRouterProvider.otherwise("/tab/home/main");
 
 }).run(function($rootScope, $ionicModal, $timeout) {
-//	$rootScope.$on("login", function(event, loginData) {
-//		if (loginData && loginData.username) {
-//			$rootScope.username = loginData.username;
-//		}
-//	});
-//
-//	$ionicModal.fromTemplateUrl('templates/login/login.html', {
-//		scope : $rootScope
-//	}).then(function(modal) {
-//		$rootScope.modal = modal;
-//	});
-//
-//	$timeout(function() {
-//		$rootScope.modal.show();
-//	}, 500);
+	// $ionicModal.fromTemplateUrl('templates/login/login.html', {
+	// scope : $rootScope
+	// }).then(function(modal) {
+	// $rootScope.modal = modal;
+	// });
+	//
+	// $timeout(function() {
+	// $rootScope.modal.show();
+	// }, 500);
+
+	$rootScope.currentLoginUser = {
+		id : 401,
+		userName : "LIFE",
+		agentCode : "401"
+	};
 });
