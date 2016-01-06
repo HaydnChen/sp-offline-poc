@@ -262,7 +262,8 @@ angular.module('ionicApp', [ 'ionic', 'ionicApp.controllers' ])
 		url : "/settings",
 		views : {
 			'settings-tab@tabs' : {
-				templateUrl : "templates/settings/menu.html"
+				templateUrl : "templates/settings/menu.html",
+				controller : 'MenuCtrl'
 			},
 			'menuContent@tabs.settings' : {
 				templateUrl : "templates/settings/main.html",
@@ -273,7 +274,8 @@ angular.module('ionicApp', [ 'ionic', 'ionicApp.controllers' ])
 		url : "/about",
 		views : {
 			'about-tab@tabs' : {
-				templateUrl : "templates/about/menu.html"
+				templateUrl : "templates/about/menu.html",
+				controller : 'MenuCtrl'
 			},
 			'menuContent@tabs.about' : {
 				templateUrl : "templates/about/main.html",
@@ -284,7 +286,8 @@ angular.module('ionicApp', [ 'ionic', 'ionicApp.controllers' ])
 		url : "/contact",
 		views : {
 			'contact-tab@tabs' : {
-				templateUrl : "templates/contact/menu.html"
+				templateUrl : "templates/contact/menu.html",
+				controller : 'MenuCtrl'
 			},
 			'menuContent@tabs.contact' : {
 				templateUrl : "templates/contact/main.html",
