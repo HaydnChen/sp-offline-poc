@@ -90,15 +90,15 @@ angular.module('ionicApp', [ 'ionic', 'ionicApp.controllers' ])
 				controller : 'QuotationTabCtrl'
 			}
 		}
-	}).state('tabs.quotationStep1', {
-		url : "/quotation/step1",
+	}).state('tabs.quotationNew', {
+		url : "/quotation/new",
 		views : {
 			'quotation-tab@tabs' : {
 				templateUrl : "templates/quotation/menu.html",
 				controller : 'MenuCtrl'
 			},
-			'menuContent@tabs.quotationStep1' : {
-				templateUrl : "templates/quotation/step1.html",
+			'menuContent@tabs.quotationNew' : {
+				templateUrl : "templates/quotation/new.html",
 				controller : 'QuotationTabCtrl'
 			}
 		}

@@ -1,0 +1,42 @@
+<ion-view title="New Quotation">
+  <ion-content has-header="true" scroll="false">
+  <ion-slide-box on-slide-changed="slideHasChanged($index)">
+    <ion-slide>
+      <div>
+      <div class="bar bar-header">
+        <div class="h1 title">Basic information</div>
+      </div>
+      <div class="content has-header">
+        <div class="list">
+          <label class="item item-input">
+            <span class="input-label">Name (as shown in NRIC/passport)<span class="red">*</span></span>
+            <input type="text">
+          </label>
+          <label class="item item-input item-select">
+            <span class="input-label">Title<span class="red">*</span></span>
+            <select>
+                <option selected>Default</option>
+                <option >Green</option>
+                <option>Red</option>
+            </select>
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Date of birth<span class="red">*</span></span>
+            <input type="date">
+          </label>
+        </div>
+      </div>
+    </div>
+    </ion-slide>
+    <ion-slide>
+      <div><h1>Step 2</h1></div>
+    </ion-slide>
+    <ion-slide>
+      <div><h1>Step 3</h1></div>
+    </ion-slide>
+    <ion-slide>
+      <div><h1>Step 4</h1></div>
+    </ion-slide>
+  </ion-slide-box>
+  </ion-content>
+</ion-view>
