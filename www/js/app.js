@@ -83,7 +83,7 @@ angular.module('ionicApp', [ 'ionic', 'ionicApp.controllers' ])
 		views : {
 			'quotation-tab@tabs' : {
 				templateUrl : "templates/quotation/menu.html",
-				controller : 'MenuCtrl'
+				controller : 'QuotationMenuCtrl'
 			},
 			'menuContent@tabs.quotationMain' : {
 				templateUrl : "templates/quotation/main.html",

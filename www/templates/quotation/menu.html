@@ -23,10 +23,10 @@
     </ion-header-bar>
     <ion-content has-header="true">
     <ion-list>
-      <ion-item menu-close href="#/tab/quotation/new">New Quotation</ion-item>
-<!--       <ion-item menu-close href="#/tab/quotation/step2">Step 2</ion-item> -->
-<!--       <ion-item menu-close href="#/tab/quotation/step3">Step 3</ion-item> -->
-<!--       <ion-item menu-close href="#/tab/quotation/step4">Step 4</ion-item> -->
+      <ion-item menu-close ng-click="go2step(0)">Premium Trial</ion-item>
+      <ion-item menu-close ng-click="go2step(1)">Proposal</ion-item>
+      <ion-item menu-close ng-click="go2step(2)">Confirm</ion-item>
+      <ion-item menu-close ng-click="go2step(3)">Oline Payment</ion-item>
     </ion-list>
     </ion-content>
   </ion-side-menu>

@@ -1,8 +1,101 @@
 <ion-view title="Quotation">
-  <ion-content>
-    <br/>
-    <p>
-      <a class="button icon icon-right ion-chevron-right" href="#/tab/quotation/new">New Quotation</a>
-    </p>
+  <ion-content has-header="true" scroll="false">
+  <ion-slide-box active-slide="quotationSlide" on-slide-changed="quotationSlideChanged($index)">
+    <ion-slide>
+      <div class="card" style="height:90%">
+      <ion-scroll style="height:100%">
+      <div class="item item-divider">{{quotation.product.label}}</div>
+      <div class="item item-text-wrap">
+        <div class="list">
+          <label class="item item-input">
+            <span class="input-label">Product type<span class="assertive">*</span></span>
+            <span ng-repeat="product in products">
+              <span class="button" ng-click="setProduct({{product}})" ng-class="{'active icon icon-right ion-checkmark': product.type==quotation.product.type}" >{{product.name}}</span>
+              <span>&nbsp;</span>
+            </span>
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Name<span class="assertive">*</span></span>
+            <span ng-repeat="familyMember in familyMembers">
+              <span class="button" ng-click="setPolicyHolder({{familyMember}})" ng-class="{'active icon icon-right ion-checkmark': familyMember.id==quotation.policyHolder.id}" >{{familyMember.name}}</span>
+              <span>&nbsp;</span>
+            </span>
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Date of birth<span class="assertive">*</span></span>
+            <input type="date" ng-change="calPremium()" ng-model="quotation.policyHolder.birthday">
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Gender<span class="assertive">*</span></span>
+            <span ng-repeat="gender in genders">
+              <span class="button" ng-click="setGender({{gender}})" ng-class="{'active icon icon-right ion-checkmark': gender.id==quotation.policyHolder.gender}" >{{gender.name}}</span>
+              <span>&nbsp;</span>
+            </span>
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Payment type<span class="assertive">*</span></span>
+            <span ng-repeat="paymentType in paymentTypes">
+              <span class="button" ng-click="setPaymentType({{paymentType}})" ng-class="{'active icon icon-right ion-checkmark': paymentType.id==quotation.paymentType}" >{{paymentType.name}}</span>
+              <span>&nbsp;</span>
+            </span>
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Duration<span class="assertive">*</span></span>
+            <span ng-repeat="duration in durations">
+              <span class="button" ng-click="setDuration({{duration}})" ng-class="{'active icon icon-right ion-checkmark': duration.value==quotation.duration}" >{{duration.label}}</span>
+              <span>&nbsp;</span>
+            </span>
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Payment method<span class="assertive">*</span></span>
+            <span ng-repeat="paymentMethod in paymentMethods">
+              <span class="button" ng-click="setPaymentMethod({{paymentMethod}})" ng-class="{'active icon icon-right ion-checkmark': paymentMethod.id==quotation.paymentMethod}" >{{paymentMethod.name}}</span>
+              <span>&nbsp;</span>
+            </span>
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Sum assured<span class="assertive">*</span></span>
+            <span ng-repeat="sumAssured in sumAssureds">
+              <span class="button" ng-click="setSumAssured({{sumAssured}})" ng-class="{'active icon icon-right ion-checkmark': sumAssured.value==quotation.sa && !otherSa}" >{{sumAssured.label}}</span>
+              <span>&nbsp;</span>
+            </span>
+            <span>
+              <span class="button" ng-click="selectOtherSa()" ng-class="{'active icon icon-right ion-checkmark': otherSa}" >Other</span>
+              <span>&nbsp;</span>
+            </span>
+            <span>
+              <input type="number" placeholder="If other, input here" ng-model="quotation.otherSa" ng-change="calPremium()"/>
+            </span>
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Premium</span>
+            <span>
+              <span class="button disabled btn-warning">{{quotation.premium | currency:"￥"}}</span>
+              <span>&nbsp;</span>
+            </span>
+            <span>
+              <span class="button btn-success" ng-click="calPremium()">Premium Calculation</span>
+              <span>&nbsp;</span>
+            </span>
+            <span>
+              <span class="button btn-danger" ng-click="go2step(1)">Buy Now</span>
+              <span>&nbsp;</span>
+            </span>
+          </label>
+        </div>
+      </div>
+    </ion-scroll>
+    </div>
+    </ion-slide>
+    <ion-slide>
+      <div><h1>Step 2</h1></div>
+    </ion-slide>
+    <ion-slide>
+      <div><h1>Step 3</h1></div>
+    </ion-slide>
+    <ion-slide>
+      <div><h1>Step 4</h1></div>
+    </ion-slide>
+  </ion-slide-box>
   </ion-content>
 </ion-view>

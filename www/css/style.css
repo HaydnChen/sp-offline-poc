@@ -2,6 +2,18 @@
 .slider {
   height: 100%;
 }
-.red {
-  color : red;
+.btn-warning {
+	color: rgb(255, 255, 255);
+	background-color: rgb(240, 173, 78);
+    border-color: rgb(239, 169, 69);
+}
+.btn-success {
+    color: rgb(255, 255, 255);
+    background-color: rgb(92, 184, 92);
+    border-color: rgb(85, 181, 85);
+}
+.btn-danger {
+    color: rgb(255, 255, 255);
+    background-color: rgb(217, 83, 79);
+    border-color: rgb(215, 75, 71);
 }
